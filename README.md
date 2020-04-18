@@ -1,2 +1,1 @@
-# reFlare
-Reddit Flare Detection 
+<center><img src="static/image/logo.png"></center>
