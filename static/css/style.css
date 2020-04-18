@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.page {
+  height: 100%;
+  background-color: white;
+}
+
+.content {
+  height: 200%;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1), -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+  background-color: #20123a;
+}
+
+.content_inner {
+  height: 50%;
+  overflow-y: auto;
+  padding: 50px 20%;
+}
+
+/* basically all styling from now on */
+.menu_toggle {
+  z-index: 900;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  cursor: pointer;
+  width: 100px;
+  height: 80px;
+  background-color: #F37272;
+  border-bottom-right-radius: 100%;
+}
+.menu_toggle:active i {
+  opacity: 0.8;
+}
+.menu_toggle i {
+  color: #f0f0f0;
+}
+.menu_toggle .menu_open,
+.menu_toggle .menu_close {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -12px;
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1), -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+}
+.menu_toggle .menu_open {
+  -webkit-transform-origin: -100px -100px;
+          transform-origin: -100px -100px;
+}
+.menu_toggle .menu_close {
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  -webkit-transform-origin: -100px -160px;
+          transform-origin: -100px -160px;
+}
+
+.menu_items {
+  position: fixed;
+  bottom: 0;
+  left: 50px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu_items li {
+  height: 60px;
+  margin-bottom: 30px;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+  -webkit-transition: -webkit-transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: -webkit-transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1), -webkit-transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1);
+}
+.menu_items li:nth-child(2) {
+  margin-left: 40px;
+}
+.menu_items li:nth-child(3) {
+  margin-left: 80px;
+}
+.menu_items a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #F37272;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+.menu_items a .icon {
+  position: relative;
+  display: inline-block;
+  margin-right: 25px;
+  color: #F37272;
+}
+.menu_items a .icon:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-left: -33px;
+  margin-top: -32px;
+  border-radius: 100%;
+  border: 2px solid black;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
+}
+.menu_items a:hover {
+  color: black;
+}
+.menu_items a:hover .icon:after {
+  border-color: black;
+}
+.menu_items a:active .icon {
+  color: black;
+}
+
+/* Let's open up the menu */
+.shazam {
+  /*.content_inner {
+    height: 100%;
+  }*/
+}
+.shazam .content {
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+.shazam .menu_open {
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+.shazam .menu_close {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+.shazam .menu_items li {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: -webkit-transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.shazam .menu_items li:nth-child(2) {
+  -webkit-transition-delay: .47s;
+          transition-delay: .47s;
+}
+.shazam .menu_items li:nth-child(3) {
+  -webkit-transition-delay: .48s;
+          transition-delay: .48s;
+}
+
+h1 {
+  padding-bottom: 15px;
+  font-family: "Sedgwick Ave Display", cursive;
+  letter-spacing: 0.1em;
+  font-size: 59px;
+  text-align: center;
+}
+
+body {
+  color: white;
+}
+
+.github-corner:hover .octo-arm {
+  -webkit-animation: octocat-wave 560ms ease-in-out;
+          animation: octocat-wave 560ms ease-in-out;
+}
+
+@-webkit-keyframes octocat-wave {
+  0%,
+    100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  20%,
+    60% {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  40%,
+    80% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+}
+
+@keyframes octocat-wave {
+  0%,
+    100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  20%,
+    60% {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  40%,
+    80% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+}
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    -webkit-animation: none;
+            animation: none;
+  }
+
+  .github-corner .octo-arm {
+    -webkit-animation: octocat-wave 560ms ease-in-out;
+            animation: octocat-wave 560ms ease-in-out;
+  }
+}
+.title strong {
+  position: relative;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.title strong:after {
+  background-image: url(https://www.mozilla.org/media/protocol/img/zaps/zap-08.fc201d70f76b.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  content: "";
+  display: block;
+  height: 0.3em;
+  left: -0.2em;
+  position: absolute;
+  top: calc(100% - 0.15em);
+  width: calc(100% + 0.4em);
+}
