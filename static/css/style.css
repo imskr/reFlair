@@ -1,4 +1,4 @@
-* {
+ * {
   box-sizing: border-box;
 }
 
@@ -118,7 +118,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  content: "";
+  content: '';
   display: block;
   width: 60px;
   height: 60px;
@@ -179,7 +179,7 @@ body {
 
 h1 {
   padding-bottom: 15px;
-  font-family: "Sedgwick Ave Display", cursive;
+  font-family: 'Fredericka the Great', cursive;
   letter-spacing: 0.1em;
   font-size: 59px;
   text-align: center;
@@ -252,7 +252,7 @@ strong {
   background-image: url(https://www.mozilla.org/media/protocol/img/zaps/zap-08.fc201d70f76b.svg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  content: "";
+  content: '';
   display: block;
   height: 0.3em;
   left: -0.2em;
@@ -265,6 +265,7 @@ strong {
 .fa-reddit {
   color: #fff;
   font-size: 50px;
+  top: 100px;
   width: 110px;
   position: absolute;
 }
@@ -307,7 +308,7 @@ strong {
   box-sizing: border-box;
   border: none;
   outline: none;
-  font-family: "Open Sans", Arial, Verdana;
+  font-family: 'Open Sans', Arial, Verdana;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -355,7 +356,7 @@ strong {
 .search-wrapper .input-holder .search-icon span::before,
 .search-wrapper .input-holder .search-icon span::after {
   position: absolute;
-  content: "";
+  content: '';
 }
 .search-wrapper .input-holder .search-icon span::before {
   width: 4px;
@@ -394,7 +395,7 @@ strong {
 .search-wrapper .close::before,
 .search-wrapper .close::after {
   position: absolute;
-  content: "";
+  content: '';
   background: #fff;
   border-radius: 2px;
 }
@@ -423,7 +424,7 @@ strong {
   background-position: 0% 15%;
   background-size: 47px;
   background-repeat: no-repeat;
-  font-family: "Sedgwick Ave Display", cursive;
+  font-family: 'Sedgwick Ave Display', cursive;
   color: white;
   font-size: 29px;
   line-height: 34px;
@@ -432,4 +433,8 @@ strong {
   transform: translateX(0px) translateY(0px);
   transition: opacity 500ms ease 0s,
     transform 1200ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+
+.arrow-style.toggle-opacity {
+  opacity: 0;
 }
