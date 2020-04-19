@@ -1,7 +1,7 @@
 <p align="center">
   <img src="static/image/logodesign.png" alt="logo">
 </p>
-<h4 align="center">A collection of awesome manuals, blogs, cheats, resources and more.</h4>
+<h4 align="center">Reddit Flare Detection Web Application for r/rindia.</h4>
 
 <br>
 
