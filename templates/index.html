@@ -52,7 +52,7 @@
       </span>
       <ul class="menu_items">
         <li>
-          <a href="#"><i class="icon fa fa-signal fa-2x"></i>Post Analysis</a>
+          <a href="#"><i class="icon fa fa-signal fa-2x"></i>Statistics</a>
         </li>
         <li>
           <a href="https://twitter.com/TheTweetofSKR"
@@ -73,22 +73,27 @@
               ><i class="fa fa-reddit" aria-hidden="true"></i
             ></span>
           </h1>
-          <div class="search-wrapper">
-            <div class="input-holder">
-              <input
-                type="text"
-                class="search-input"
-                placeholder="Enter your URL"
-              />
-              <button class="search-icon" onclick="searchToggle(this, event);">
-                <span></span>
-              </button>
+          <div class="flex search-text-wrapper">
+            <div class="search-wrapper">
+              <div class="input-holder">
+                <input
+                  type="url"
+                  class="search-input"
+                  placeholder="Enter your URL"
+                />
+                <button
+                  class="search-icon"
+                  onclick="searchToggle(this, event);"
+                >
+                  <span></span>
+                </button>
+              </div>
+              <span class="close" onclick="searchToggle(this, event);"></span>
             </div>
-            <span class="close" onclick="searchToggle(this, event);"></span>
+            <div class="arrow-style" data-ix="heading-text-load">
+              Click Here!
+            </div>
           </div>
-        </div>
-        <div class="arrow-style" data-ix="heading-text-load">
-          Click Here To Predict
         </div>
       </main>
     </div>

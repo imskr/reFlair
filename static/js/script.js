@@ -29,11 +29,28 @@ function searchToggle(obj, evt) {
 const searchBoxNode = document.querySelector('.search-icon');
 const stylishTextNode = document.querySelector('.arrow-style');
 const closeSearchNode = document.querySelector('.close');
+const searchTextWrapperNode = document.querySelector('.search-text-wrapper');
 
 searchBoxNode.addEventListener('click', () => {
   stylishTextNode.classList.add('toggle-opacity');
+
+  // hack for making searchbox center after click
+  searchTextWrapperNode.style.width = 'auto';
+  searchTextWrapperNode.style.alignItems = 'center';
+  searchTextWrapperNode.style.marginLeft = 0;
+
+  // show close-search button
+  closeSearchNode.style.opacity = 1;
 });
 
 closeSearchNode.addEventListener('click', () => {
   stylishTextNode.classList.remove('toggle-opacity');
+
+  // hack for making search box center after click
+  searchTextWrapperNode.style.width = '50vw';
+  searchTextWrapperNode.style.alignItems = 'flex-start';
+  searchTextWrapperNode.style.marginLeft = '50%';
+
+  // hide close-search button
+  closeSearchNode.style.opacity = 0;
 });
