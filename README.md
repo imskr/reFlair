@@ -1,7 +1,7 @@
 <p align="center">
   <img src="static/image/logodesign.png" alt="logo" height="200">
 </p>
-<h4 align="center">Reddit Flare Detection Web Application for r/india.</h4>
+<h4 align="center">Reddit Flair Detection Web Application for r/india.</h4>
 
 <br>
 
