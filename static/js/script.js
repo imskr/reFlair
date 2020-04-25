@@ -52,5 +52,5 @@ closeSearchNode.addEventListener('click', () => {
   searchTextWrapperNode.style.marginLeft = '50%';
 
   // hide close-search button
-  closeSearchNode.style.opacity = 0;
+  closeSearchNode.style.opacity = 0; 
 });

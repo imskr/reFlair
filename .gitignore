@@ -1,2 +1,4 @@
-node_modules
-static/ember-menu/node_modules
+__pycache__
+redditAuth.py
+.vscode
+reFlare

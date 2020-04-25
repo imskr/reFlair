@@ -7,10 +7,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
-    />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../static/css/style.css" />
   </head>
   <body>
@@ -73,13 +70,15 @@
               ><i class="fa fa-reddit" aria-hidden="true"></i
             ></span>
           </h1>
+          <form action="{{url_for('detect')}}" method="post">
           <div class="flex search-text-wrapper">
             <div class="search-wrapper">
               <div class="input-holder">
                 <input
                   type="url"
+                  name="redditpost"
                   class="search-input"
-                  placeholder="Enter your URL"
+                  placeholder="Enter your URL from r/India"
                 />
                 <button
                   class="search-icon"
@@ -90,11 +89,25 @@
               </div>
               <span class="close" onclick="searchToggle(this, event);"></span>
             </div>
-            <div class="arrow-style" data-ix="heading-text-load">
-              Click Here!
+            </form>
+            <div class="arrow-style" style="font-family:'Fredericka the Great'; font-weight:bold;">
+              
+              <div style="font-family:'Fredericka the Great';"><h2>Predicted Flair: {{ predicted_flair }}</h2>
+                <h2>Actual Flair: {{ actualflair }}</h2></div>
+              </div>
+              <br>
+              <br>
             </div>
           </div>
         </div>
+        <footer>
+          <div class="flex-center" align="right">
+            <i class="fa fa-github fa-4x icon-3d"></i>
+            <i class="fa fa-twitter fa-4x icon-3d"></i>
+            <i class="fa fa-linkedin fa-4x icon-3d"></i>
+            <i class="fa fa-medium fa-4x icon-3d"></i>
+          </div>
+        </footer>
       </main>
     </div>
 
