@@ -34,14 +34,14 @@ def automated_testing():
 		with open(myfile.filename, 'r') as filein:
 			for url in filein:
 				lst.append(url)
-		dic = {}
+		result = {}
 		for i in lst:
 			i = i[:-1]
 			pred = predict(i)
 			key = i
 			value = pred[0]
-			dic.update({key : value})
-	d = json.dumps(dic)
+			result.update({key : value})
+	d = json.dumps(result)
 	return json.dumps(d)
 
 @app.errorhandler(404)
@@ -50,4 +50,4 @@ def errors(error):
 	return (render_template('notfound.html'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
