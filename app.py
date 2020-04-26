@@ -21,24 +21,25 @@ def detect():
 	return render_template('index.html', predicted_flair = predicted_flair, actualflair = actualflair)
 
 
-@app.route("/automated_testing", methods = ['POST'])
+@app.route("/automated_testing", methods = ['POST', 'GET'])
 def index():                                                                                         
     return (render_template("testing.html"))
 
 def automated_testing():
-	myfile = request.files['upload_file']
-	myfile.save(myfile.filename)
-	lst = []
-	with open(myfile.filename, 'r') as filein:
-		for url in filein:
-			lst.append(url)
-	dic = {}
-	for i in lst:
-		i = i[:-1]
-		pred = predict(i)
-		key = i
-		value = pred[0]
-		dic.update({key : value})
+	if request.method == 'POST':
+		myfile = request.files['upload_file']
+		myfile.save(myfile.filename)
+		lst = []
+		with open(myfile.filename, 'r') as filein:
+			for url in filein:
+				lst.append(url)
+		dic = {}
+		for i in lst:
+			i = i[:-1]
+			pred = predict(i)
+			key = i
+			value = pred[0]
+			dic.update({key : value})
 	d = json.dumps(dic)
 	return json.dumps(d)
 
