@@ -30,7 +30,7 @@
 
 * **Linux**
   ```bash
-  $ git clone https://github.com/imskr/reflair.git
+  $ git clone https://github.com/imskr/reFlair.git
   $ cd reflair
   $ python3 -m venv env_name
   $ source env_name/bin/activate
@@ -43,7 +43,7 @@
 *Note: If you have `fish` terminal run `$ source env_name/bin/activate.fish`*
 * **Windows**
   ```bash
-  $ git clone https://github.com/imskr/reflair.git
+  $ git clone https://github.com/imskr/reFlair.git
   $ cd reflair
   $ pip3 install -r requirements.txt
   $ python3 app.py
