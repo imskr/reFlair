@@ -15,7 +15,7 @@
   </a>
 
  <a href="https://github.com/imskr">
-    <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/TheTweetofSKR?style=social">" alt="follow">
+    <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/TheTweetofSKR?style=social">
   </a>
 </p>
 
