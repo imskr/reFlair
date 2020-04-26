@@ -21,10 +21,11 @@ def detect():
 	return render_template('index.html', predicted_flair = predicted_flair, actualflair = actualflair)
 
 
-@app.route("/automated_testing", methods = ['POST', 'GET'])
+@app.route("/automated_testing")
 def index():                                                                                         
     return (render_template("testing.html"))
 
+@app.route("/automated_testing", methods = ['POST', 'GET'])
 def automated_testing():
 	if request.method == 'POST':
 		myfile = request.files['upload_file']
@@ -49,4 +50,4 @@ def errors(error):
 	return (render_template('notfound.html'))
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
