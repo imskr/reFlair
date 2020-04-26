@@ -491,3 +491,77 @@ strong {
     text-shadow: -5px 0 #f44336, 5px -4px #2196f3;
   }
 }
+
+/* Choose File Styles */
+
+.choose-file {
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: absolute;
+  width: 0.1px;
+}
+
+/* Style both input field and label */
+.choose-file+.upload-file {
+  background-color: #fff;
+  box-sizing: border-box;
+  color: #5A5541;
+  display: block;
+  font-family: Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 8.2rem 1rem 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px dashed #27BEC5;
+  border-radius: 16px;
+  text-transform: initial;
+  cursor: pointer;
+}
+
+.choose-file:focus+.upload-file,
+.choose-file+.upload-file:hover {
+  background-color: #d2f3f5;
+}
+
+
+label.upload-file::before {
+  content: "Upload a File";
+  text-decoration: underline;
+  color: #27BEC5;
+  font-size: 16px;
+}
+
+/* This appears after a file is chosen. */
+.choose-file:valid+.upload-file::before {
+  content: attr(data-text);
+  color: #5A5541;
+  font-size: 16px;
+}
+
+.upload {
+  position: relative;
+  width: 347px;
+  margin: 30px auto;
+}
+
+.upload img {
+  width: 55px;
+  position: absolute;
+  top: 36px;
+  left: 144px;
+  pointer-events: none;
+}
+
+.btn.btn-up {
+  color: #fff;
+  background-color: #27BEC5;
+  border-color: #27BEC5;
+  min-width: 72px;
+  font-size: 16px;
+  margin: 20px auto 0px;
+  display: table;
+  text-transform: initial;
+}
