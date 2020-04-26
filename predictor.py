@@ -8,13 +8,13 @@ import praw
 import pandas as pd
 import numpy as np
 import sklearn
-import redditAuth
+from redditAuth import *
 
 model = pickle.load(open('models/final_model.pkl','rb'))
-reddit = praw.Reddit(client_id=redditAuth.account[0],
-                     client_secret=redditAuth.account[1],
-                     user_agent=redditAuth.account[2], username=redditAuth.account[3],
-                     password=redditAuth.account[4])
+reddit = praw.Reddit(client_id=account[0],
+                     client_secret=account[1],
+                     user_agent=account[2], username=account[3],
+                     password=account[4])
 
 REPLACE_BY_SPACE = re.compile('[/(){}\[\]\|@,;]')
 REPLACE_SYMBOL = re.compile('[^0-9a-z #+_]')
