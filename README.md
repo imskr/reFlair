@@ -23,3 +23,26 @@
   <sub>Created by <a href="https://github.com/imskr"><strong>Shubham Kumar</strong></a>
 </p>
 <hr noshade>
+
+## Local Set-up
+
+* Linux
+  ```bash
+  $ git clone https://github.com/imskr/reflair.git
+  $ cd reflair
+  $ python3 -m venv env_name
+  $ source env_name/bin/activate
+  $ pip3 install -r requirements.txt
+  $ python3 app.py
+  ```
+**Note: If you have `fish` terminal run `$ source env_name/bin/activate.fish`**
+* Windows
+  ```bash
+  $ git clone https://github.com/imskr/reflair.git
+  $ cd reflair
+  $ python3 -m venv env_name
+  $ source env_name/bin/activate
+  $ pip3 install -r requirements.txt
+  $ python3 app.py
+  ```
+
