@@ -43,8 +43,6 @@
   ```bash
   $ git clone https://github.com/imskr/reflair.git
   $ cd reflair
-  $ python3 -m venv env_name
-  $ source env_name/bin/activate
   $ pip3 install -r requirements.txt
   $ python3 app.py
   ```
@@ -53,25 +51,26 @@
 
 ## Data (r/india)
 * **Data fetched using `PRAW` reddit API**.
-* **Flairs supporting (currently 11)**
+* **Flairs supporting (currently 14)**
+* *Note: `na` is added for unlabeled flair*
   
-  | Label | Flair              | Samples       | After Cleaning     |  
-  | ---   | ---                | ---           | ---                |
-  | 1.    | AskIndia           | 11            | 11                 |
-  | 2.    | Business/Finance   | 458           | 458                |
-  | 3.    | CAA-NRC-NPR        | 11            | 11                 |
-  | 4.    | Food               | 121           | 121                |
-  | 5.    | Non-Political      | 1322          | 1322               |
-  | 6.    | Policy/Economy     | 165           | 165                |
-  | 7.    | Politics           | 124           | 124                |
-  | 8.    | Scheduled          | 369           | 369                |
-  | 9.    | Science/Technology | 11            | 11                 |
-  | 10.   | Coronavirus        | 88            | 88                 |
-  | 11.   | Sports             | 3             | 03                 |
-  | 12.   | Photography        |               |                    |
-  | 13.   | TIL                |               |                    |
-  | 14.   | Unverified         |               |                    |
-  | 15.   | na                 |               |                    |
+  | Label | Flair              | Samples(Clean)|  
+  | ---   | ---                | ---           |              
+  | 1.    | AskIndia           | 754           |               
+  | 2.    | Business/Finance   | 1688          |                
+  | 3.    | CAA-NRC-NPR        | 77            |                
+  | 4.    | Food               | 99            |                
+  | 5.    | Non-Political      | 1355          |               
+  | 6.    | Policy/Economy     | 113           |                
+  | 7.    | Politics           | 468           |                
+  | 8.    | Scheduled          | 1419          |              
+  | 9.    | Science/Technology | 11            |                 
+  | 10.   | Coronavirus        | 44            |                 
+  | 11.   | Sports             | 3232          |                 
+  | 12.   | Photography        | 88            |                   
+  | 13.   | TIL                | 11            |                   
+  | 14.   | Unverified         | 55            |                    
+  | 15.   | na                 | 121           |                    
 
 
 * **Distribution Graph**
@@ -81,12 +80,6 @@
 
 
 ## Training Algorithms
-
-* **Title as Feature**
-  ![title](static/image/title.png)
-
-* **Body as Feature**
-  ![title](static/image/body.png)
 
 * **Title+Body+URL as Feature**
   ![title](static/image/tbu.png)
