@@ -43,23 +43,16 @@ def stringConvert(text):
 
 def predict(url):
     c = []
-    posts = {
-        'id': [],
-        'title': [],
-        'body': [],
-        'comments': [],
-        'url': [],
-        }
-
+    posts = {}
     submission = reddit.submission(url=url)
     posts['id'] = submission.id
     posts['title'] = submission.title
     posts['body'] = submission.selftext
+    posts['url'] = submission.url
     submission.comments.replace_more(limit=0)
     for comment in submission.comments.list():
         c.append(comment.body)
     posts['comments'].append(c)
-    posts['url'].append(submission.url)
     data_df = pd.DataFrame(posts)
     data_df.fillna('')
     data_df['title'] = data_df['title'].apply(stringConvert)
@@ -68,6 +61,7 @@ def predict(url):
     data_df['body'] = data_df['body'].apply(clean_data)
     data_df['comments'] = data_df['comments'].apply(stringConvert)
     data_df['comments'] = data_df['comments'].apply(clean_data)
+    data_df['url'] = data_df['url'].apply(stringConvert)
 
     combine = data_df['title'] + data_df['body'] + data_df['url']
     data_df = data_df.assign(combine=combine)

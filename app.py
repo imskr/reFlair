@@ -3,6 +3,7 @@ import predictor
 from predictor import predict, FlairActual
 import json
 import os
+from werkzeug.utils import secure_filename
 port = int(os.environ.get("PORT",5000))
 
 app = Flask(__name__)
@@ -29,17 +30,18 @@ def index():
 def automated_testing():
 	if request.method == 'POST':
 		myfile = request.files['upload_file']
-		myfile.save(myfile.filename)
+		myfile.save(secure_filename(myfile.filename))
 		lst = []
-		with open(myfile.filename, 'r') as filein:
+		with open(myfile.filename, 'rb') as filein:
 			for url in filein:
 				lst.append(url)
 		result = {}
 		for i in lst:
 			i = i[:-1]
 			pred = predict(i)
+			print(pred)
 			key = i
-			value = pred[0]
+			value = pred
 			result.update({key : value})
 	d = json.dumps(result)
 	return json.dumps(d)
