@@ -42,30 +42,15 @@ def stringConvert(text):
 # Define predict function
 
 def predict(url):
-    c = []
     posts = {}
     submission = reddit.submission(url=url)
-    posts['id'] = submission.id
-    posts['title'] = submission.title
-    posts['body'] = submission.selftext
-    posts['url'] = submission.url
-    submission.comments.replace_more(limit=0)
-    for comment in submission.comments.list():
-        c.append(comment.body)
-    posts['comments'].append(c)
-    data_df = pd.DataFrame(posts)
-    data_df.fillna('')
-    data_df['title'] = data_df['title'].apply(stringConvert)
-    data_df['title'] = data_df['title'].apply(clean_data)
-    data_df['body'] = data_df['body'].apply(stringConvert)
-    data_df['body'] = data_df['body'].apply(clean_data)
-    data_df['comments'] = data_df['comments'].apply(stringConvert)
-    data_df['comments'] = data_df['comments'].apply(clean_data)
-    data_df['url'] = data_df['url'].apply(stringConvert)
-
-    combine = data_df['title'] + data_df['body'] + data_df['url']
-    data_df = data_df.assign(combine=combine)
-    return (model.predict(data_df['combine'])[0])
+    posts['title'] = str(submission.title)
+    posts['body'] = str(submission.selftext)
+    posts['url'] = str(submission.url)
+    posts['title'] = clean_data(str(posts['title']))
+    posts['body'] = clean_data(str(posts['body']))
+    combine = posts['title'] + posts['body'] + posts['url']
+    return (model.predict([combine])[0])
 
 
 def FlairActual(url):

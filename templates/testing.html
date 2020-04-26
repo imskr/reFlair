@@ -50,7 +50,7 @@
         </h1>
         <br><br><br>
         <h3 style="font-size: xx-large; font:700;" align="center"><b>Upload the .txt file for automated testing!</h3>
-        <form action="https://reflair.herokuapp.com/automated_testing" method="post"
+        <form action="{{url_for('automated_testing')}}" method="post"
           enctype="multipart/form-data" align="center">
           <br>
           <b>Select File:</b> <input type="file" name="upload_file">

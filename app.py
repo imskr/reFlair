@@ -32,14 +32,13 @@ def automated_testing():
 		myfile = request.files['upload_file']
 		myfile.save(secure_filename(myfile.filename))
 		lst = []
-		with open(myfile.filename, 'rb') as filein:
+		with open(myfile.filename, 'r') as filein:
 			for url in filein:
 				lst.append(url)
 		result = {}
 		for i in lst:
 			i = i[:-1]
 			pred = predict(i)
-			print(pred)
 			key = i
 			value = pred
 			result.update({key : value})
