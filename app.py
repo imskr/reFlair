@@ -27,4 +27,4 @@ def errors(error):
 	return (render_template('notfound.html'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
