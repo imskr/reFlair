@@ -10,8 +10,8 @@
     <img src="https://img.shields.io/badge/License-MIT-orange.svg?longCache=true" alt="License">
   </a>
   
-  <a href="https://github.com/imskr/reFlare/stargazers">
-    <img src="https://img.shields.io/github/stars/imskr/reFlare.svg?style=social" alt="Stargazers">
+  <a href="https://github.com/imskr/reFlair/stargazers">
+    <img src="https://img.shields.io/github/stars/imskr/reFlair?style=social" alt="Stargazers">
   </a>
 
  <a href="https://github.com/imskr">
