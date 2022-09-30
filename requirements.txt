@@ -1,6 +1,6 @@
 Flask==1.1.1
 gensim==3.8.0
-joblib==0.13.2
+joblib==1.2.0
 matplotlib==2.1.1
 nltk==3.4.5
 numpy==1.16.0
